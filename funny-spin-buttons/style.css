@@ -1,0 +1,95 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  background: #01080e;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.eyes {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -30%);
+  height: 25%;
+  width: 40%;
+
+  border-right: 10px solid white;
+  border-left: 10px solid white;
+}
+
+.smile {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -65%);
+  width: 80%;
+  height: 25%;
+
+  border-right: 10px solid white;
+  border-left: 10px solid white;
+  border-bottom: 10px solid white;
+}
+
+.item:not(:last-child) {
+  margin-right: 4rem;
+}
+
+.list {
+  display: flex;
+  list-style: none;
+}
+
+.item {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  width: 150px;
+  background: #12161a;
+  border-radius: 50%;
+  transition: all 0.4s ease-in;
+}
+
+.item:hover {
+  border-radius: 4px;
+}
+
+.item--primary:hover {
+  background: #ea2662;
+}
+.item--secondary:hover {
+  background: #2ee2ac;
+}
+.item--tertiary:hover {
+  background: #185a9d;
+}
+
+.item:hover > .link {
+  transform: rotate(360deg);
+}
+
+.link {
+  transition: all 0.3s ease-in;
+}
