@@ -1,0 +1,104 @@
+html {
+  font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #5fad56;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 3rem 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #5fad56;
+}
+
+.search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.search__input {
+  background: transparent;
+  font-size: 4rem;
+  padding: 0 0.5em;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  left: 0;
+  line-height: 100px;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.search__input:focus, .search__input:not(:placeholder-shown) {
+  cursor: initial;
+  opacity: 1;
+  width: calc(100% - 100px);
+  -webkit-transition: opacity 0.5s 0.3s ease-in-out;
+  transition: opacity 0.5s 0.3s ease-in-out;
+}
+
+.search__spacer {
+  width: 0;
+  background: white;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.search__button {
+  background: white;
+  border: 0;
+  outline: 0;
+  width: 100px;
+  height: 100px;
+  font-size: 4rem;
+  border: none;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.search__input:focus ~ .search__spacer,
+.search__input:not(:placeholder-shown) ~ .search__spacer {
+  width: 800px;
+}
+
+.search__input:focus ~ .search__button,
+.search__input:not(:placeholder-shown) ~ .search__button {
+  border-left: 2px solid #ececec;
+  -webkit-transition: opacity 0.5s 0.3s ease-in-out;
+  transition: opacity 0.5s 0.3s ease-in-out;
+}
+/*# sourceMappingURL=style.css.map */
